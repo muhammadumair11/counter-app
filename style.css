@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap');
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(178, 70, 201);
+    background: -moz-linear-gradient(137deg, rgba(178, 70, 201, 0.7147233893557423) 0%, rgba(48, 120, 191, 1) 100%);
+    background: -webkit-linear-gradient(137deg, rgba(178, 70, 201, 0.7147233893557423) 0%, rgba(48, 120, 191, 1) 100%);
+    background: linear-gradient(137deg, rgba(178, 70, 201, 0.7147233893557423) 0%, rgba(48, 120, 191, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b246c9", endColorstr="#3078bf", GradientType=1);
+
+
+    background-size: 300%;
+    animation: movingBackground 2s alternate infinite;
+}
+
+@keyframes movingBackground {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+
+h1 {
+    position: relative;
+    bottom: 50px;
+    font-weight: bold;
+}
+
+h1 span {
+    color: red;
+}
+
+
+.clock {
+    display: flex;
+}
+
+.clock-item {
+    margin: 0 2rem;
+}
+.clock-item span, h1 {
+    display: block;
+    text-align: center;
+
+    font-family: 'Mohave', sans-serif;
+    font-size: clamp(1rem ,5vw, 2rem);
+    color: white;
+    text-transform: uppercase;
+}
